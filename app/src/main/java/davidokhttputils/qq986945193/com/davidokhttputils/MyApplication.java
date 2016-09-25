@@ -2,6 +2,14 @@ package davidokhttputils.qq986945193.com.davidokhttputils;
 
 import android.app.Application;
 
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.util.concurrent.TimeUnit;
+
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+
 import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpUtils;
 
 /**
@@ -19,24 +27,10 @@ public class MyApplication extends Application {
         initOkHttpUtils();
     }
 
-
+    /**
+     * 初始化构造okhttpClient对象
+     */
     private void initOkHttpUtils() {
         OkHttpUtils okHttpClient = OkHttpUtils.getInstance();
-//        okHttpClient.setConnectTimeout(10, TimeUnit.SECONDS);
-//        okHttpClient.setReadTimeout(15, TimeUnit.SECONDS);
-//        okHttpClient.setWriteTimeout(15, TimeUnit.SECONDS);
-//
-//        //ignore HTTPS Authentication
-//        okHttpClient.setHostnameVerifier(new MyHostnameVerifier());
-//        try {
-//            SSLContext sc = SSLContext.getInstance("TLS");
-//            sc.init(null, new TrustManager[]{new MyTrustManager()}, new SecureRandom());
-//            okHttpClient.setSslSocketFactory(sc.getSocketFactory());
-//        } catch (NoSuchAlgorithmException e) {
-//            e.printStackTrace();
-//        } catch (KeyManagementException e) {
-//            e.printStackTrace();
-//        }
-
     }
 }
