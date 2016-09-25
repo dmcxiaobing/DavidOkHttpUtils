@@ -102,5 +102,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+
+        OkHttpUtils.get(GetUrl, String.class, new OkHttpStopCallback<String>() {
+            @Override
+            public void onSuccess(Response response, String s) {
+                Log.e("mm", "string.class" + s);
+
+            }
+
+        });
     }
 }
