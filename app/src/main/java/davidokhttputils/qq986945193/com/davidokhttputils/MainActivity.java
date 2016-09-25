@@ -5,12 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.List;
-
-import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpBaseCallback;
+import davidokhttputils.qq986945193.com.davidokhttputils.bean.IdCardBean;
 import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpStopCallback;
 import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpUtils;
 import okhttp3.Request;
