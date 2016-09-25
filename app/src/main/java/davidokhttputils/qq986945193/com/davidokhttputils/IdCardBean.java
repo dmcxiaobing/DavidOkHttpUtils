@@ -7,6 +7,11 @@ package davidokhttputils.qq986945193.com.davidokhttputils;
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @交流Qq ：986945193
  */
+
+/**
+ * 身份证查询结果的bean
+ *
+ */
 public class IdCardBean {
 
     /**
