@@ -2,6 +2,8 @@ package davidokhttputils.qq986945193.com.davidokhttputils;
 
 import android.app.Application;
 
+import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpUtils;
+
 /**
  * @author ：程序员小冰
  * @新浪微博 ：http://weibo.com/mcxiaobing

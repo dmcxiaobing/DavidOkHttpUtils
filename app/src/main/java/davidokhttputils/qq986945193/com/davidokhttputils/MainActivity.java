@@ -8,12 +8,18 @@ import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpUtils;
+
 /**
  * @author ：程序员小冰
  * @新浪微博 ：http://weibo.com/mcxiaobing
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  * @交流Qq ：986945193
+ */
+
+/**
+ * 首页进入的请求类
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        OkHttpUtils.asyncJsonObjectByURL(GetUrl, new OkHttpUtils.Func4() {
+        OkHttpUtils.asyncJsonObjectByURL(GetUrl, new OkHttpUtils.OnGetJsonObjectListener() {
             @Override
             public void onResponse(JSONObject jsonObject) {
                 Log.e("dada", "onResponse: " + jsonObject.toString());
@@ -33,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
         });
 
