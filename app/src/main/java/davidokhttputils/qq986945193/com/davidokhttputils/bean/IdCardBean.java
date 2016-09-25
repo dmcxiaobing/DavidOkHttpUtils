@@ -1,4 +1,4 @@
-package davidokhttputils.qq986945193.com.davidokhttputils;
+package davidokhttputils.qq986945193.com.davidokhttputils.bean;
 
 /**
  * @author ：程序员小冰
