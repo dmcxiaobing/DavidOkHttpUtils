@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 
+import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+
 import davidokhttputils.qq986945193.com.davidokhttputils.bean.IdCardBean;
 import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpStopCallback;
 import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpUtils;
@@ -25,7 +29,7 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity {
 
     private String GetUrl = "http://apis.baidu.com/apistore/idservice/id";
-    private String PostUrl = "http://apis.baidu.com/apistore/idservice/id?id=642226199303107806";
+    private String PostUrl = "http://apis.baidu.com/apistore/idservice/id";
 
     private OkHttpUtils mOkHttpUtils = OkHttpUtils.getInstance();
     private IdCardBean mIdCardBean;
@@ -105,6 +109,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+        });
+        Map<String, String> params = new HashMap<>();
+        params.put("id", "642226199303107806");
+        OkHttpUtils.post(PostUrl, params, null, new OkHttpStopCallback<IdCardBean>() {
+            @Override
+            public void onSuccess(Response response, IdCardBean idCardBean) {
+                Log.e("mm", "post" + idCardBean.getRetMsg());
+
+            }
         });
     }
 }
