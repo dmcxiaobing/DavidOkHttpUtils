@@ -12,7 +12,7 @@ package davidokhttputils.qq986945193.com.davidokhttputils.constants;
  */
 public class Constant {
     public static final String API_KEY = "apikey";
-    public static final String API_KEY_SECRET = "3ecfce74d2c88190c6568948db5d2018";
+    public static final String API_KEY_SECRET = "";
     public static final String TAG = "QQ986945193";
 
 }
