@@ -40,6 +40,11 @@ public class MyApplication extends Application {
         return app;
     }
 
+    /**
+     * @GitHub: https://github.com/QQ986945193
+     * @CSDN博客: http://blog.csdn.net/qq_21376985
+     * @return
+     */
     public OkHttpUtils getOkHttpUtils() {
         return this.mHttpUtils;
     }
