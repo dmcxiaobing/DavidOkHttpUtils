@@ -20,10 +20,12 @@ import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpUtils;
  * @交流Qq ：986945193
  */
 public class MyApplication extends Application {
-
+    private static MyApplication app;
+    private OkHttpUtils mHttpUtils;
     @Override
     public void onCreate() {
         super.onCreate();
+        app = this;
         initOkHttpUtils();
     }
 
@@ -31,6 +33,15 @@ public class MyApplication extends Application {
      * 初始化构造okhttpClient对象
      */
     private void initOkHttpUtils() {
-        OkHttpUtils okHttpClient = OkHttpUtils.getInstance();
+        mHttpUtils = OkHttpUtils.getInstance();
     }
+
+    public static MyApplication getApp() {
+        return app;
+    }
+
+    public OkHttpUtils getOkHttpUtils() {
+        return this.mHttpUtils;
+    }
+
 }

@@ -1,16 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="davidokhttputils.qq986945193.com.davidokhttputils.MainActivity">
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btn_get_one"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:text="请求指定的url返回的结果是json字符串" />
+
+    <Button
+        android:id="@+id/btn_get_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请求返回的是jsonOject对象" />
+
+    <Button
+        android:id="@+id/btn_get_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请求返回的是byte字节数组" />
+
+
+
+    <Button
+        android:id="@+id/btn_get_five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="表单提交 post网络请求" />
+
+    <Button
+        android:id="@+id/btn_get_six"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GET请求返回结果是 实体类对象 类型" />
+
+    <Button
+        android:id="@+id/btn_get_seven"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="POST请求返回结果是 实体类对象 类型" />
+
+
+
+</LinearLayout>
