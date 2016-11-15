@@ -14,7 +14,7 @@ import java.util.Map;
 
 import davidokhttputils.qq986945193.com.davidokhttputils.bean.IdCardBean;
 import davidokhttputils.qq986945193.com.davidokhttputils.constants.Constant;
-import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpStopCallback;
+import davidokhttputils.qq986945193.com.davidokhttputils.callback.OkHttpStopCallback;
 import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpUtils;
 import okhttp3.Response;
 
