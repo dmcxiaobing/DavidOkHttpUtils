@@ -21,6 +21,6 @@ Android开发OkHttp的网络请求简单封装。
 ![这里写图片描述](http://img.blog.csdn.net/20161011155512203)
 
 
-关于其他途径下载的代码可能有问题，比如CSDN地址:http://download.csdn.net/detail/qq_21376985/9650839
+关于其他途径下载的代码可能有问题，比如:[CSDN地址](http://download.csdn.net/detail/qq_21376985/9650839)
 
 建议下载github最新版本。因为发现Bug以及完善功能均在github进行了更新。其他路径暂停维护。
