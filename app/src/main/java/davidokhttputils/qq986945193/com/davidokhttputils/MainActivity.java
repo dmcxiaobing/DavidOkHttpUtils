@@ -13,8 +13,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 import davidokhttputils.qq986945193.com.davidokhttputils.bean.IdCardBean;
-import davidokhttputils.qq986945193.com.davidokhttputils.constants.Constant;
 import davidokhttputils.qq986945193.com.davidokhttputils.callback.OkHttpStopCallback;
+import davidokhttputils.qq986945193.com.davidokhttputils.callback.OnGetByteArrayListener;
+import davidokhttputils.qq986945193.com.davidokhttputils.callback.OnGetJsonObjectListener;
+import davidokhttputils.qq986945193.com.davidokhttputils.callback.OnGetOkhttpStringListener;
+import davidokhttputils.qq986945193.com.davidokhttputils.constants.Constant;
 import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpUtils;
 import okhttp3.Response;
 
@@ -62,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         btn_get_one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mOkHttpUtils.asyncJsonStringByURL(GetUrl, new OkHttpUtils.OnGetOkhttpStringListener() {
+                mOkHttpUtils.asyncJsonStringByURL(GetUrl, new OnGetOkhttpStringListener() {
                     @Override
                     public void onResponse(String result) {
                         if (result != null && !result.equals("")) {
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         btn_get_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mOkHttpUtils.asyncJsonObjectByURL(GetUrl, new OkHttpUtils.OnGetJsonObjectListener() {
+                mOkHttpUtils.asyncJsonObjectByURL(GetUrl, new OnGetJsonObjectListener() {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
                         Log.e(Constant.TAG, "asyncJsonObjectByURL: " + jsonObject.toString());
@@ -101,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         btn_get_three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mOkHttpUtils.asyncGetByteByURL(GetUrl, new OkHttpUtils.OnGetByteArrayListener() {
+                mOkHttpUtils.asyncGetByteByURL(GetUrl, new OnGetByteArrayListener() {
                     @Override
                     public void onResponse(byte[] result) {
                         if (result != null) {
@@ -119,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         btn_get_five.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mOkHttpUtils.sendComplexForm(PostUrl, params, new OkHttpUtils.OnGetJsonObjectListener() {
+                mOkHttpUtils.sendComplexForm(PostUrl, params, new OnGetJsonObjectListener() {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
                         Log.e(Constant.TAG, "asyncJsonObjectByURL: " + jsonObject.toString());
@@ -159,7 +162,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onSuccess(Response response, IdCardBean idCardBean) {
                         if (idCardBean != null) {
                             mIdCardBean = idCardBean;
-                            Log.e(Constant.TAG, mIdCardBean.getRetMsg());
+                            if (mIdCardBean.getRetMsg() != null) {
+                                Log.e(Constant.TAG, mIdCardBean.getRetMsg());
+                            }
                         } else {
                             Log.e(Constant.TAG, "idCardBean为空了");
                         }

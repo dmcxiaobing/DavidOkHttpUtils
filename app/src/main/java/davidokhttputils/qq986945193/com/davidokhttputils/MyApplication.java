@@ -2,14 +2,6 @@ package davidokhttputils.qq986945193.com.davidokhttputils;
 
 import android.app.Application;
 
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.util.concurrent.TimeUnit;
-
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-
 import davidokhttputils.qq986945193.com.davidokhttputils.utils.OkHttpUtils;
 
 /**
